@@ -26,12 +26,11 @@ d3.selectAll("p")
 + 文件操作
 
   - [Selection](https://d3js.org/#selections)
-  > [D3 Selection reference](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection)
-
+      + [D3 Selection reference](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection)
   - [Dynamic Properties](https://d3js.org/#properties)
-  > [D3 Selection reference - Modifying Elements](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#modifying-elements)
-  > [D3 Selection reference - Joining Data](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#joining-data)
-  > [D3 Selection reference - Handling Events](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#handling-events)
+      + [D3 Selection reference - Modifying Elements](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#modifying-elements)
+      + [D3 Selection reference - Joining Data](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#joining-data)
+      + [D3 Selection reference - Handling Events](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#handling-events)
 
 D3.js 的一切開始都是起於 Selection，亦即選擇應操作目標；基於 HTML 的文件架構，在 JS 要對特定文件進行互動 ( 增減子元件、動畫設定、動態修改屬性 ) 皆會需要取得正確的 HTML element。
 
