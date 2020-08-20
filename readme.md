@@ -10,7 +10,7 @@ D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then 
 
 D3.js 可使用任意資料來綁定到 DOM 物件上，並以此應用到資料驅動並轉換至文件，例如你可以使用 D3.js 自數值矩陣產生 HTML 表格，或使用同樣資料還產生互動 SVG 條狀圖並配上順暢的轉場互動；需注意的是 D3.js 並非整合型框架，其目的在解決一個主要問題『資料操作文件的效率』。
 
-#### 框架
+## 框架
 
 閱讀完 D3.js 官方文件，可以明確知道其框架是一套『資訊化視覺元件』函式庫，其框架並未依存其他架構性框架 (例如：jQuery、React、Vue)，但透過其說明文件與應用程式介面 (API) 文件，可以知道其框架住要運作方式類似 jQuery，基於 DOM 元件達到動態增減元件、動畫設定、資訊圖像呈現，框架採用程序程式設計概念。
 
@@ -21,7 +21,7 @@ d3.selectAll("p")
 ```
 > D3.js 採用程序程式設計，可以很明確看到程式中不斷呼叫回傳物件子函數來運作。
 
-##### 操作
+#### 操作
 
 + 文件操作
 
@@ -65,9 +65,9 @@ class MyComponent extends React.Component {
 
 + 數值操作
 
-##### 互動
+#### 互動
 
-##### 元件
+#### 元件
 
 
 
@@ -84,15 +84,15 @@ yarn dev
 ```
 > 其他還有 build、start，但本專案並不需使用
 
-#### 參考
+## 參考
 
-##### 官方文件
+#### 官方文件
 
 + [learn D3.js](https://observablehq.com/collection/@d3/learn-d3)
 + [D3.js github](https://github.com/d3/d3)
 + [D3.js API Reference](https://github.com/d3/d3/blob/master/API.md)
 
-##### 教學網站
+#### 教學網站
 
 + [SVG D3 - D3.js 初體驗](https://www.oxxostudio.tw/articles/201410/svg-d3-js.html)
 + [使用 React 製作資料圖表 — D3 與其他三種方案](https://medium.com/visuallylab/891534fce073)
