@@ -40,7 +40,72 @@ class MyComponent extends React.Component {
 需注意的是，React 元件有其自有的生命週期，而 D3.js 亦有自己的操作行為，在原則上應盡量避免互相驅動對象操作行為，或者操作應明確區分，以及正確的重繪與資料導入，避免交互操作導致系統進入無窮回圈。
 > 詳細說明請參考教學網站內網址。
 
-###### 指令 append、data、join 注意事項
+##### 指令 append、data、join 注意事項
+
++ [selection.join document](https://observablehq.com/@d3/selection-join)
++ [D3.js - Data Join](https://www.tutorialspoint.com/d3js/d3js_data_join.htm)
+
+在 D3.js 中的文件操作，透過 Select 取得目標後，下一步會使用 [append](https://github.com/d3/d3-selection/blob/master/README.md#selection_append)、[insert](https://github.com/d3/d3-selection/blob/master/README.md#selection_insert) 建立相關 D3.js 可控制的頁面元素。
+
+```
+D3.select(this.ref.current).append("div")
+```
+
+而在 append 函數有兩個主要建立的方式
+
++ 元件名稱
+```
+selection.append("element name")
+```
+
++ 建立函數
+```
+selection.append(() => { element.node })
+```
+
+在撰寫範例程式 ([barchart](./src/pages/barchart.jsx)、[selection : join](./src/pages/selection-join.jsx)) 時，有一個微妙而難以解釋的架構。
+
+1. append 會將欲建立的元件放置在列表最後
+2. 若要建立唯一、覆寫元件，則需配合 data、join 來取得 enter、update、exit 來進行元件操作
+3. 在同一個根元件下的內容已覆寫 append，則舊的元件會被刪除後，從最後端加入
+
+依據目前知道的結構，透過建立函數內的回傳值，可以直接覆寫元件內容，但使用此方式必須注意以下技巧：
+
+1. 覆寫的根元件不可變更
+2. 配合 async generate function 來建立異步覆寫迴圈
+
+關於根元件不可變更是指如下的元件結構中的 ```<svg></svg>```，若對架構的假設正確，根元件在 append 時會有一個辨識編號，若此編號改變，則 append 會視為一個新的元件，但若相同，則會採用深度複製直接更換。
+
+```
+<svg>
+  <text>1</text>
+  ...
+  <text>100</text>
+</svg>
+```
+
+##### 指令 enter、exit 注意事項
+
++ [SVG D3.js - Enter、Update 和 Exit](https://www.oxxostudio.tw/articles/201509/svg-d3-18-enter-update-exit.html)
+
+依據文件可以知道在資料 join 後，可以得到一下操作元
+
++ enter：新增的資料
++ update：若存在舊資料，且新資料也存在
++ exit：若存在舊資料，但當前資料不存在
+
+這些操作元會針對相對的元素進行操作
+
+```
+svg.selectAll("text")
+    .data(randomLetters(), d => d)
+    .join(
+        enter => enter.append("text").attr("fill", "red").text(d => d),
+        update => update.attr("fill", "gray")
+        exit => exit.remove()
+    )
+```
+> 目前的實驗中極少用到 exit，但有看到其他文件中提到可以對此操作元下達此項命令
 
 #### 檔案操作
 
