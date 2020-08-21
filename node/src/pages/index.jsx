@@ -14,6 +14,12 @@ const box = {
 function HomePage({ stars }) {
     return <div style={box}>
         <Logo />
+        <ul>
+            <li><a href="./selection-element">Selection : select element</a></li>
+            <li><a href="./barchart">Selection : create BarChart</a></li>
+            <li><a href="./selection-join">Selection : join random text</a></li>
+            <li><a href="./fetches">Fetches</a></li>
+        </ul>
     </div>
 }
 
