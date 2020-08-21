@@ -2,12 +2,12 @@
 
 #### 文件操作
 
-    - [Selection](https://d3js.org/#selections)
-        + [D3 Selection reference](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection)
-    - [Dynamic Properties](https://d3js.org/#properties)
-        + [D3 Selection reference - Modifying Elements](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#modifying-elements)
-        + [D3 Selection reference - Joining Data](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#joining-data)
-        + [D3 Selection reference - Handling Events](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#handling-events)
++ [Selection](https://d3js.org/#selections)
+    - [D3 Selection reference](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection)
++ [Dynamic Properties](https://d3js.org/#properties)
+    - [D3 Selection reference - Modifying Elements](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#modifying-elements)
+    - [D3 Selection reference - Joining Data](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#joining-data)
+    - [D3 Selection reference - Handling Events](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#handling-events)
 
 D3.js 的一切開始都是起於 Selection，亦即選擇應操作目標；基於 HTML 的文件架構，在 JS 要對特定文件進行互動 ( 增減子元件、動畫設定、動態修改屬性 ) 皆會需要取得正確的 HTML element。
 
@@ -44,12 +44,12 @@ class MyComponent extends React.Component {
 
 #### 檔案操作
 
-    - [Fetches (d3-fetch)](https://github.com/d3/d3-fetch/tree/v1.1.2)
-        + [Introduction to Data](https://observablehq.com/@observablehq/introduction-to-data)
-            - [NPM @observablehq/stdlib](https://www.npmjs.com/package/@observablehq/stdlib)
-            - [File Attachments](https://observablehq.com/@observablehq/file-attachments)
-        + [Learn D3: Data](https://observablehq.com/@d3/learn-d3-data?collection=@d3/learn-d3)
-    - [Delimiter-Separated Values (d3-dsv)](https://github.com/d3/d3-dsv/tree/v1.2.0)
++ [Fetches (d3-fetch)](https://github.com/d3/d3-fetch/tree/v1.1.2)
+    - [Introduction to Data](https://observablehq.com/@observablehq/introduction-to-data)
+        + [NPM @observablehq/stdlib](https://www.npmjs.com/package/@observablehq/stdlib)
+        + [File Attachments](https://observablehq.com/@observablehq/file-attachments)
+    - [Learn D3: Data](https://observablehq.com/@d3/learn-d3-data?collection=@d3/learn-d3)
++ [Delimiter-Separated Values (d3-dsv)](https://github.com/d3/d3-dsv/tree/v1.2.0)
 
 在 D3.js 官方說明網站是使用 [Observable](https://observablehq.com/) 的線上工具取得的檔案，因此需要另外透過 ```Delimiter-Separated Values (d3-dsv)``` 進行資料格式處理；若直接存取特定檔案，則可以經過 ```Fetches (d3-fetch)``` 來取得資料；若本地欲使用 Observable 工具，可額外掛入第三方函式庫，並運用其檔案、圖像、下載等存取動作。
 
