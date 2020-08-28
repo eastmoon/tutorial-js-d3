@@ -45,6 +45,7 @@ d3.selectAll(".apple")
     - [D3 for Mere Mortals](http://recursion.org/d3-for-mere-mortals)
 
 
-#### 滑鼠操作
+#### 介面操作
 
-+ [Drag](https://github.com/d3/d3-drag/blob/v2.0.0/README.md)
++ [Drag](https://github.com/d3/d3-drag/blob/v2.0.0/README.md)，托放元素
++ [Zoom](https://github.com/d3/d3-zoom/blob/v2.0.0/README.md)，對 SVG 影像的縮放、位移控制

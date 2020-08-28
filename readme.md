@@ -35,7 +35,6 @@ d3.selectAll("p")
     - [Force](https://github.com/d3/d3-force/blob/v2.1.1/README.md)，聚力元件
     - [Geographic (geo)](https://github.com/d3/d3-geo/blob/v2.0.0/README.md)，地理資訊元件
     - [Voronoi Diagram](https://github.com/d3/d3-delaunay/blob/v5.3.0/README.md)，[沃羅諾伊圖 wiki](https://zh.wikipedia.org/wiki/%E6%B2%83%E7%BD%97%E8%AF%BA%E4%BC%8A%E5%9B%BE)
-    - [Zoom](https://github.com/d3/d3-zoom/blob/v2.0.0/README.md)，對 SVG 影像的縮放、位移控制
 + 系統物件
     - [Observable (d3-dispatch)](https://github.com/d3/d3-dispatch/blob/v2.0.0/README.md)
     - [Timer Interval (d3-time)](https://github.com/d3/d3-time/blob/v2.0.0/README.md)
