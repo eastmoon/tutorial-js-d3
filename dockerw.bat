@@ -138,22 +138,34 @@ goto end
         tutorial-js-d3:%PROJECT_NAME% bash -l -c "yarn install"
 
     echo ^> Startup docker container instance
-    docker run -ti --rm^
-        -v %cd%\node\:/repo/^
-        -v %cd%\cache\:/repo/node_modules^
-        -p 8080:80^
-        tutorial-js-d3:%PROJECT_NAME% bash
+    IF defined DEVELOPER (
+        docker run -ti --rm^
+            -v %cd%\node\:/repo/^
+            -v %cd%\cache\:/repo/node_modules^
+            -p 8080:80^
+            tutorial-js-d3:%PROJECT_NAME% bash
+    ) else (
+        docker run -ti --rm^
+            -v %cd%\node\:/repo/^
+            -v %cd%\cache\:/repo/node_modules^
+            -p 8080:80^
+            tutorial-js-d3:%PROJECT_NAME% bash -l -c "yarn dev"
+    )
     goto end
 )
 
 :cli-start-args (
+    for %%p in (%*) do (
+        if "%%p"=="--dev" ( set DEVELOPER=1 )
+    )
     goto end
 )
 
 :cli-start-help (
-    echo Run container
+    echo Run container, and start server by "yarn dev" command
     echo.
     echo Options:
+    echo      --dev             Run and into container.
     echo.
     goto end
 )

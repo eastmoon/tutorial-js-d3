@@ -46,12 +46,13 @@ d3.selectAll("p")
 ```
 dockerw start
 ```
+> 直接以 ```yarn dev``` 啟動，結束請使用 "Ctrl + Z"
 
 + 開啟開發環境
 ```
-yarn dev
+dockerw start --dev
 ```
-> 其他還有 build、start，但本專案並不需使用
+> 此模式會直接進入容器，此後請以 ```yarn dev```、```yarn build```、```yarn start```，但本專案並不需使用
 
 ## 參考
 
