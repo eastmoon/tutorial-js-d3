@@ -4,6 +4,7 @@
 
 + [Selection](https://d3js.org/#selections)
     - [D3 Selection reference](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#selection)
+    - [How Selections Work](https://bost.ocks.org/mike/selection/)
 + [Dynamic Properties](https://d3js.org/#properties)
     - [D3 Selection reference - Modifying Elements](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#modifying-elements)
     - [D3 Selection reference - Joining Data](https://github.com/d3/d3-selection/blob/v1.4.1/README.md#joining-data)
@@ -43,6 +44,7 @@ class MyComponent extends React.Component {
 ##### 指令 append、data、join 注意事項
 
 + [selection.join document](https://observablehq.com/@d3/selection-join)
+    - [Thinking with Joins](https://bost.ocks.org/mike/join/)
 + [D3.js - Data Join](https://www.tutorialspoint.com/d3js/d3js_data_join.htm)
 
 在 D3.js 中的文件操作，透過 Select 取得目標後，下一步會使用 [append](https://github.com/d3/d3-selection/blob/master/README.md#selection_append)、[insert](https://github.com/d3/d3-selection/blob/master/README.md#selection_insert) 建立相關 D3.js 可控制的頁面元素。
@@ -88,7 +90,7 @@ selection.append(() => { element.node })
 
 + [SVG D3.js - Enter、Update 和 Exit](https://www.oxxostudio.tw/articles/201509/svg-d3-18-enter-update-exit.html)
 
-依據文件可以知道在資料 join 後，可以得到一下操作元
+依據文件可以知道在資料 join 後，可以得到以下操作元
 
 + enter：新增的資料
 + update：若存在舊資料，且新資料也存在
@@ -119,3 +121,39 @@ svg.selectAll("text")
 在 D3.js 官方說明網站是使用 [Observable](https://observablehq.com/) 的線上工具取得的檔案，因此需要另外透過 ```Delimiter-Separated Values (d3-dsv)``` 進行資料格式處理；若直接存取特定檔案，則可以經過 ```Fetches (d3-fetch)``` 來取得資料；若本地欲使用 Observable 工具，可額外掛入第三方函式庫，並運用其檔案、圖像、下載等存取動作。
 
 #### 數值操作
+
++ [Data types](https://alignedleft.com/tutorials/d3/data-types)
+    - [Array (d3-array)](https://github.com/d3/d3-array/blob/master/README.md)，矩陣物件操作與運算
+    - [Color (d3-color)](https://github.com/d3/d3-color/blob/v2.0.0/README.md)、[Color Schemes (d3-scale-chromatic)](https://github.com/d3/d3-scale-chromatic/blob/v2.0.0/README.md)，顏色物件與顏色表
+    - [Number Format (d3-format)](https://github.com/d3/d3-format/blob/v2.0.0/README.md)，數值格式
+    - [Time format (d3-time-format)](https://github.com/d3/d3-time-format/blob/v3.0.0/README.md)，時間格式
+    - [Random Number (d3-random)](https://github.com/d3/d3-random/blob/v2.2.0/README.md)，隨機數值
+    - [Interpolate (d3-interpolate)](https://github.com/d3/d3-interpolate/blob/master/README.md)，差值結構，例如百分比取值
+    - [Polygon (d3-polygon)](https://github.com/d3/d3-polygon/blob/v2.0.0/README.md)，多邊形資料結構
+    - [Quadtree (d3-quadtree)](https://github.com/d3/d3-quadtree/blob/v2.0.0/README.md)，四分數資料結構
+    - [Hierarchy (d3-hierarchy)](https://github.com/d3/d3-hierarchy/blob/v2.0.0/README.md)，階層式資料結構
+        + Hierarchy (Stratify)
+        + Cluster
+        + Tree
+        + Treemap (Treemap Tiling)
+        + Partition
+        + Pack
+    - [Scales (d3-scale)](https://github.com/d3/d3-scale/blob/v3.2.2/README.md)，尺度改變數值資料結構
+        + Continuous (Linear, Power, Log, Identity, Time, Radial)
+        + Sequential
+        + Diverging
+        + Quantize
+        + Quantile
+        + Threshold
+        + Ordinal (Band, Point)
+    - [Shape (d3-shape)](https://github.com/d3/d3-shape/blob/v2.0.0/README.md)，形狀物件資料結構
+        + Arcs
+        + Pies
+        + Lines
+        + Areas
+        + Curves
+        + Custom Curves
+        + Links
+        + Symbols
+        + Custom Symbol Types
+        + Stacks
