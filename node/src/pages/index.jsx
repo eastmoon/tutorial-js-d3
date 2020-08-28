@@ -18,6 +18,7 @@ function HomePage({ stars }) {
             <li><a href="./selection-element">Selection : select element</a></li>
             <li><a href="./barchart">Selection : create BarChart</a></li>
             <li><a href="./selection-join">Selection : join random text</a></li>
+            <li><a href="./selection-join-random-text-animate">Selection : join random text with animate</a></li>
             <li><a href="./fetches">Fetches</a></li>
         </ul>
     </div>
